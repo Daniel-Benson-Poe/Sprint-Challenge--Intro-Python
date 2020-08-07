@@ -4,7 +4,7 @@
 # object is constructed.
 
 class GroundVehicle():
-    def __init__(self, num_wheels=4):
+    def __init__(self, num_wheels=4):  # default num_wheels to 4
         self.num_wheels = num_wheels
 
     def drive(self):
@@ -19,11 +19,11 @@ class GroundVehicle():
 # Override the drive() method in Motorcycle so that it returns "BRAAAP!!"
 
 class Motorcycle(GroundVehicle):
-    def __init__(self, num_wheels=2):
-        super(Motorcycle, self).__init__(num_wheels)
+    def __init__(self, num_wheels=2):  # set new default num_wheels to 2
+        super(Motorcycle, self).__init__(num_wheels)  # super for parent class (GroundVehicle)
 
     def drive(self):
-        return "BRAAAP!!"
+        return "BRAAAP!!"  # Override 'drive' method in the GroundVehicle class
 
 vehicles = [
     GroundVehicle(),
